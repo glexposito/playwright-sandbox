@@ -35,6 +35,22 @@ npm test
 
 The app starts automatically via `webServer` in `playwright.config.ts`.
 
+## Running with Docker
+
+Start the app from the repository root:
+
+```bash
+docker compose up --build
+```
+
+After the first build, you can rerun it with:
+
+```bash
+docker compose up
+```
+
+Open http://localhost:8080. The container stores the app database at `/data/games.db` through the local `./.data` volume mount.
+
 ## How tests work
 
 Each test resets `games.test.db` directly via `better-sqlite3` in `beforeEach` — full isolation, no shared state between tests. The app runs in the `Test` environment using `appsettings.Test.json`, keeping `games.db` (dev) untouched.

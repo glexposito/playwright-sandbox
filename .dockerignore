@@ -1,0 +1,16 @@
+.git
+.gitignore
+.idea
+.vs
+.claude
+
+**/bin
+**/obj
+**/node_modules
+**/playwright-report
+**/test-results
+
+PlaywrightSandbox.Web/games.db
+PlaywrightSandbox.Web/games.test.db
+PlaywrightSandbox.Web/games.test.db-shm
+PlaywrightSandbox.Web/games.test.db-wal
