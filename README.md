@@ -1,6 +1,6 @@
 # ASP.NET Core Playwright CRUD POC
 
-Small POC ASP.NET Core MVC app with a Games CRUD used as a target for simple Playwright end-to-end tests.
+Small POC ASP.NET Core MVC app with a Games CRUD, built as a quick vibe-coding exercise to demonstrate simple Playwright end-to-end testing.
 
 ## Prerequisites
 
