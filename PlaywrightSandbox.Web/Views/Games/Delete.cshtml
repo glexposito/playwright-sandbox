@@ -1,0 +1,26 @@
+@model PlaywrightSandbox.Web.Models.Game
+@{ ViewData["Title"] = "Delete Game"; }
+
+<h1>Delete Game</h1>
+<hr/>
+
+<div class="alert alert-danger">
+    Are you sure you want to delete <strong>@Model.Title</strong>?
+</div>
+
+<dl class="row">
+    <dt class="col-sm-3">Genre</dt>
+    <dd class="col-sm-9">@Model.Genre</dd>
+
+    <dt class="col-sm-3">Release Year</dt>
+    <dd class="col-sm-9">@Model.ReleaseYear</dd>
+
+    <dt class="col-sm-3">Rating</dt>
+    <dd class="col-sm-9">@Model.Rating / 10</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

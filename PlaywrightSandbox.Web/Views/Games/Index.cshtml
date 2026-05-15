@@ -1,0 +1,35 @@
+@model IEnumerable<PlaywrightSandbox.Web.Models.Game>
+@{ ViewData["Title"] = "Games"; }
+
+<h1>Games</h1>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Game</a>
+</p>
+
+<table class="table table-striped" id="games-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Rating</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var game in Model)
+        {
+            <tr data-game-id="@game.Id">
+                <td>@game.Title</td>
+                <td>@game.Genre</td>
+                <td>@game.ReleaseYear</td>
+                <td>@game.Rating / 10</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@game.Id" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@game.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@game.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

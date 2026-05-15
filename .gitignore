@@ -1,0 +1,25 @@
+.DS_Store
+
+# IDE
+.idea/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# .NET
+bin/
+obj/
+
+# Logs
+*.log
+
+# Node / Playwright
+node_modules/
+playwright-report/
+test-results/
+
+# Local env files
+.env
+.env.*
