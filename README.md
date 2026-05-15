@@ -38,11 +38,3 @@ The app starts automatically via `webServer` in `playwright.config.ts`.
 ## How tests work
 
 Each test resets `games.test.db` directly via `better-sqlite3` in `beforeEach` — full isolation, no shared state between tests. The app runs in the `Test` environment using `appsettings.Test.json`, keeping `games.db` (dev) untouched.
-
-## Adding a migration
-
-```bash
-dotnet tool install --global dotnet-ef  # once
-cd PlaywrightSandbox.Web
-dotnet ef migrations add <MigrationName>
-```
