@@ -13,7 +13,7 @@ WORKDIR /app
 
 ENV ASPNETCORE_URLS=http://+:8080
 ENV ASPNETCORE_HTTP_PORTS=8080
-ENV ConnectionStrings__Games=Data Source=/data/games.db
+ENV ConnectionStrings__Games="Data Source=/data/games.db"
 
 RUN mkdir -p /data
 
