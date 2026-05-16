@@ -55,6 +55,6 @@ Open http://localhost:8080. The container stores the app database at `/data/game
 
 Each test resets `games.test.db` directly via `better-sqlite3` in `beforeEach` — full isolation, no shared state between tests. The app runs in the `Test` environment using `appsettings.Test.json`, keeping `games.db` (dev) untouched.
 
-## Screenshot example
+### Screenshot example
 
 <img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/37369b03-1caf-4993-8de9-07ad396bace5" />
